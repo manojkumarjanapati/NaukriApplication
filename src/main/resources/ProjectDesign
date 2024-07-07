@@ -9,3 +9,5 @@ Job - [id, role, jobDesc, location, company, recruiter, applications]
 Company - [id, name, recruiters, jobs]
 Application - [id, job, expectedCtc, noticePeriod, status]
 
+
+
