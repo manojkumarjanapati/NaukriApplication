@@ -1,6 +1,2 @@
-com\pack\NaukriApplication\recruiterrepository\RecruiterRepository.class
-com\pack\NaukriApplication\model\Recruiter.class
-com\pack\NaukriApplication\recruiterservice\RecruiterService.class
+com\pack\NaukriApplication\entity\Login.class
 com\pack\NaukriApplication\NaukriApplication.class
-com\pack\NaukriApplication\recruiterController\RecruiterController.class
-com\pack\NaukriApplication\recruiterserviceimpl\RecruiterServiceImpl.class

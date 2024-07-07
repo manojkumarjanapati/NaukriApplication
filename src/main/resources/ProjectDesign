@@ -1,0 +1,11 @@
+Admin
+Login - [email, password]
+User(abstarct) - [id, name, @DiscriminatorColumn role(admin, jobSeeker, recruiter), phone, @Embedded login]
+
+JobSeeker extends User - [education, experience, skills]
+Recruiter extends User - [company, jobs]
+
+Job - [id, role, jobDesc, location, company, recruiter, applications]
+Company - [id, name, recruiters, jobs]
+Application - [id, job, expectedCtc, noticePeriod, status]
+
