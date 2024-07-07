@@ -1,5 +1,6 @@
 package com.pack.NaukriApplication.entity;
 
+import com.pack.NaukriApplication.dao.AppConstants;
 import jakarta.persistence.*;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -11,11 +12,16 @@ import java.util.List;
 @Getter
 @Setter
 @EqualsAndHashCode(callSuper = true)
-@DiscriminatorValue("Recruiter")
+@DiscriminatorValue(AppConstants.RECRUITER)
 public class Recruiter extends User {
     @ManyToOne
     private Company company;
     @OneToMany(mappedBy = "recruiter", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Job> jobs;
+
+    @Override
+    public String getRole() {
+        return AppConstants.RECRUITER;
+    }
 
 }
