@@ -14,9 +14,9 @@ public class Job {
     private String role;
     private String jobDesc;
     private String location;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private Company company;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private Recruiter recruiter;
     @OneToMany(mappedBy = "job", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Application> applications;

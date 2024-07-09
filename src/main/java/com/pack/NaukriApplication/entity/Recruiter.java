@@ -14,7 +14,7 @@ import java.util.List;
 @EqualsAndHashCode(callSuper = true)
 @DiscriminatorValue(AppConstants.RECRUITER)
 public class Recruiter extends User {
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private Company company;
     @OneToMany(mappedBy = "recruiter", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Job> jobs;

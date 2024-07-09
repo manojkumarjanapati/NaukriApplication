@@ -13,7 +13,7 @@ public class Application {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private Job job;
     private float expectedCtc;
     private int noticePeriod;

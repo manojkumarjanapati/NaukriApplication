@@ -11,7 +11,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@DiscriminatorValue(AppConstants.JOBSEEKER)
+@DiscriminatorValue(AppConstants.JOB_SEEKER)
 public class JobSeeker extends User {
 
     private String education;
@@ -20,7 +20,7 @@ public class JobSeeker extends User {
 
     @Override
     public String getRole() {
-        return AppConstants.JOBSEEKER;
+        return AppConstants.JOB_SEEKER;
     }
 
 }
