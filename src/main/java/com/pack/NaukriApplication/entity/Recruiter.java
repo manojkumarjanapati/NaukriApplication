@@ -6,18 +6,19 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Getter
 @Setter
-@EqualsAndHashCode(callSuper = true)
 @DiscriminatorValue(AppConstants.RECRUITER)
 public class Recruiter extends User {
     @ManyToOne(cascade = CascadeType.ALL)
     private Company company;
     @OneToMany(mappedBy = "recruiter", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Job> jobs;
+    private Set<Job> jobs = new HashSet<>();
 
     @Override
     public String getRole() {

@@ -1,12 +1,15 @@
 package com.pack.NaukriApplication.entity;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
-@Data
+@Getter
+@Setter
 public class Job {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,6 +22,6 @@ public class Job {
     @ManyToOne(cascade = CascadeType.ALL)
     private Recruiter recruiter;
     @OneToMany(mappedBy = "job", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Application> applications;
+    private Set<Application> applications = new HashSet<>();
 
 }

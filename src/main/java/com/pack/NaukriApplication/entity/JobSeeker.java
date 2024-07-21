@@ -3,11 +3,10 @@ package com.pack.NaukriApplication.entity;
 import com.pack.NaukriApplication.dao.AppConstants;
 import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
-import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
-@EqualsAndHashCode(callSuper = true)
+
 @Entity
 @Getter
 @Setter
